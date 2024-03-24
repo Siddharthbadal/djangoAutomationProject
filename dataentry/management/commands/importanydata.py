@@ -34,8 +34,7 @@ class Command(BaseCommand):
 
 
         with open(file_path, 'r') as file:
-            reader = csv.DictReader(file)
-            
+            reader = csv.DictReader(file)           
             for row in reader:
                 pre_name = row['name']
                 existing_record = model.objects.filter(name=pre_name).exists()
@@ -50,4 +49,5 @@ class Command(BaseCommand):
                 else:
                     self.stdout.write(self.style.WARNING(f"data for {pre_name} already exist!"))
 
+        
 

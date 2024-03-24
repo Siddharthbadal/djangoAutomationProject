@@ -1,4 +1,12 @@
-Djnago Automation Projects
+## Django Automation Projects
 
-## Data  Project 
-Upload data directly from command line by using django custom command feature.
+## Data Project 
+Automate data import and export by using custom commands.
+User can import and export data from CSV file.
+
+
+
+## Tech
+    - Django
+    - Bootstrap 
+    - Django Custom commands
