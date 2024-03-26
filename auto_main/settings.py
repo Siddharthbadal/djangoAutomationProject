@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -139,3 +139,13 @@ MESSAGE_TAGS = {
     message.ERROR: 'danger',
     50: 'critical',
 }
+
+# celery configuration
+CELERY_BROKER_URL = 'redis://redis:6379/0'  # docker
+# CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Kolkata'
+CELERY_RESULT_BACKEND='redis://redis:6379/0'  #docker
+# CELERY_RESULT_BACKEND='redis://127.0.0.1:6379/0' 

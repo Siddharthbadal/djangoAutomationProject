@@ -1,0 +1,4 @@
+redis-server
+celery -A auto_main.celery worker --pool=solo -l info
+
+docker-compose up -d --build
