@@ -5,6 +5,9 @@ Automated data import and export by using django custom commands.
 User can import and export data from CSV file for a existing database model.
 Error handling and Messages display.
 
+Used celery and redis for backend tasks like importing and exporting data. 
+
+
 ## Custome Commands For Command Line Interface
 Import Data
     - python manage.py importdata file_path model_name

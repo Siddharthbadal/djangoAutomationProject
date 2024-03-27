@@ -9,6 +9,7 @@ def home(request):
 
 
 # celery test 
+
 def celery_test(request):
    print("Processing.. .")
    celery_test_task.delay()

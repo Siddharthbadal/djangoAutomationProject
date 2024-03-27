@@ -141,11 +141,17 @@ MESSAGE_TAGS = {
 }
 
 # celery configuration
-CELERY_BROKER_URL = 'redis://redis:6379/0'  # docker
-# CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+
+# local host
+# CELERY_BROKER_URL = 'redis://localhost:6379'
+# CELERY_RESULT_BACKEND='redis://127.0.0.1:6379' 
+
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Kolkata'
-CELERY_RESULT_BACKEND='redis://redis:6379/0'  #docker
-# CELERY_RESULT_BACKEND='redis://127.0.0.1:6379/0' 
+
+
+# for docker
+CELERY_BROKER_URL = 'redis://redis:6379/0'  
+CELERY_RESULT_BACKEND='redis://redis:6379/0'  

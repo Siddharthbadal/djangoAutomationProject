@@ -2,3 +2,5 @@ redis-server
 celery -A auto_main.celery worker --pool=solo -l info
 
 docker-compose up -d --build
+
+docker-compose run django python manage.py 'curom commands' 'arguments'

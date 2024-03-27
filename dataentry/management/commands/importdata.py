@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand, CommandError
 from django.apps import apps 
 # from dataentry.models import Employee
 import csv
-from django.db import DataError
+from dataentry.utils import check_csv_errors
 
 
 # proposed command - python manage.py importdata csv_file_path modal_name
@@ -21,32 +21,11 @@ class Command(BaseCommand):
         file_path = kwargs['file_path']
         # print(file_path)
         model_name = kwargs['model_name']
-        model = None 
-        # search for the model accros all apps
-        for app_config in apps.get_app_configs():
-            # search model in app
-            try:
-                model = apps.get_model(app_config.label, model_name)
-                break # model found 
-            except LookupError:
-                continue # model not found. search in the next app
         
-        if not model:
-            raise CommandError(f"{model_name} not found!")
+        model = check_csv_errors(file_path, model_name)
         
-
-        # compare csv file header with the model names for errors
-        # get the model fileds name
-        model_fields = [field.name for field in model._meta.fields if field.name != 'id']
-        # model fields also has ID. needs to exclude 
-        print(model_fields)
-
         with open(file_path, 'r') as file:
-            reader = csv.DictReader(file)   
-            csv_header = reader.fieldnames
-            if csv_header != model_fields:
-                      raise DataError(f"CSV headers must match with {model_name} table fields!")
-            
+            reader = csv.DictReader(file)        
             for row in reader:
                     # print(row)
                 model.objects.create(**row)
