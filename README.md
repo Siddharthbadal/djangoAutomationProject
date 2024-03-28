@@ -24,4 +24,8 @@ Delete Data
     - Celery  
     - Redis
     - Docker
-   
+
+
+
+    
+   ![dataImportwithCelery](https://github.com/Siddharthbadal/djangoAutomationProject/assets/55015090/7b462e37-6cce-49ca-adff-efad21bba004)
