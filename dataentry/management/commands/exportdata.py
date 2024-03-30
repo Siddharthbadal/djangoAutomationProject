@@ -4,6 +4,7 @@ from django.core.management import BaseCommand, CommandError
 from django.apps import apps
 from django.core.management.base import CommandParser 
 from dataentry.models import Employee
+from dataentry.utils import generate_csv_file
 
 # proposed commaand - python manage.py exportdata
 
@@ -33,12 +34,7 @@ class Command(BaseCommand):
         model_data = model.objects.all()
         # print(model_data)
 
-        # current date time
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S") 
-        # csv file details
-        file_path = f"E:\django\Exported_{model_name}_data_{timestamp}.csv"
-        print(file_path)
-
+        file_path=generate_csv_file(model_name)       
 
         # open and write the file 
         with open(file_path, "w", newline="") as file:
