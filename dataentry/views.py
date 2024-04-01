@@ -33,7 +33,7 @@ def importdata(request):
             check_csv_errors(file_path, model_name)
         except Exception as e:
             messages.error(request, str(e))
-            return redirect('import-data')
+            return redirect('import_data')
 
         # handle import data task 
         import_data_task.delay(file_path, model_name)
@@ -42,7 +42,7 @@ def importdata(request):
         messages.success(request, "Upload is in process. You will be notified once completed!")
         
 
-        return redirect('import-data')
+        return redirect('import_data')
 
     else:
         all_models = get_all_custom_models()

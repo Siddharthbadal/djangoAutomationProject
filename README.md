@@ -1,11 +1,11 @@
 ## Django Automation Projects
 
 ## Data Project 
-Automated data import and export by using django custom commands.
+Automated data import and export by using django custom commands, celery and redis. 
 User can import and export data from CSV file for a existing database model.
-Error handling and Messages display.
+Also applied Error handling and Messages display.
 
-Used celery and redis for backend tasks like importing and exporting data. 
+Used celery and redis with django for faster data processing. 
 
 
 ## Custome Commands For Command Line Interface
@@ -24,6 +24,7 @@ Delete Data
     - Celery  
     - Redis
     - Docker
+    - Bootstrap
 
 
 
