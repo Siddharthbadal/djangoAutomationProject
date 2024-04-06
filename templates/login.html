@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% include 'alerts.html' %}
+<div class="container mt-5 mb-5 fw-bold shadow p-3 rounded" 
+style="color:#44403c; max-width:550px;">
+        <h1 class='text-center fw-bolder text-uppercase' >SignIn </h1>
+
+        <form action={% url 'login' %} method='POST'>
+            {% csrf_token %}
+
+            <div class="form-group">
+                {{ form | crispy }}
+            
+                 <input type="submit" value='Login' class='btn btn-primary'>
+             </div>
+        </form>
+
+        <div class='text-center mt-5 text-muted'>
+            <small> Create an Account, </small>
+            <a class="text-black fw-bold text-muted  pr-1" href="{% url 'register' %}">
+                <small>Register</small>
+            </a>
+           </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

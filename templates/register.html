@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% include 'alerts.html' %}
+<div class="container mt-5 mb-5 fw-bold shadow rounded p-3" 
+style="color:#44403c; max-width:550px;">
+        <h1 class='text-center fw-bolder text-uppercase' >Register </h1>
+
+        <form action={% url 'register' %} method='POST'>
+            {% csrf_token %}
+
+            <div class="form-group">
+                {{ form | crispy }}
+            
+                 <input type="submit" value='Register' class='btn btn-primary'>
+             </div>
+        </form>
+       <div class='text-center text-muted mt-3'>
+        <small> Already Registered, </small>
+        <a class="text-black fw-bold text-muted pr-1" href="{% url 'login' %}">
+            <small>Login</small>
+        </a>
+       </div>
+    
+</div>
+
+
+
+
+{% endblock %}

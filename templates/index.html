@@ -4,6 +4,7 @@
   {% block content %}
 
   <div class="container" style="padding: 50px;">
+    {% if user.is_authenticated %}
     {% comment %} <h2 class="text-center">Data Automation</h2> {% endcomment %}
     <div class="row pt-5">
         <!-- Import data -->
@@ -95,6 +96,58 @@
             </a>
         </div> {% endcomment %}
     </div>
+
+    {% else %}
+    <h5 class='text-muted text-center mb-1'>Data Automation Tools with Django, Redis, Celery</h5>
+    <div class="row pt-5">
+        <!-- Import data -->
+        <div class="col-md-4">
+            <a href="{% url 'login' %}" class="text-decoration-none text-dark">
+                <div class="card alert-primary shadow">
+                    <div class="card-header border-bottom border-secondary">
+                    <h4>Import Data</h4>
+                    </div>
+                    <div class="card-body">
+                    <p class="card-text">Imports data from CSV file to any table.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Export Data -->
+        <div class="col-md-4">
+            <a href="{% url 'login' %}" class="text-decoration-none text-dark">
+                <div class="card alert-success shadow">
+                    <div class="card-header border-bottom border-secondary">
+                    <h4>Export Data</h4>
+                    </div>
+                    <div class="card-body">
+                    <p class="card-text">Exports data from a  table to a CSV file.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Bulk Emails -->
+        <div class="col-md-4">
+            <a href="{% url 'login' %}" class="text-decoration-none text-dark">
+                <div class="card alert-danger shadow">
+                    <div class="card-header border-bottom border-secondary">
+                    <h4>Bulk Emails</h4>
+                    </div>
+                    <div class="card-body">
+                    <p class="card-text">Sends bulk emails to users</p>
+                    </div>
+                </div>
+               </a>
+                </div>
+        </div>
+
+   
+
+
+
+
+    {% endif %}
 </div>
 
 
