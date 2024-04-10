@@ -1,10 +1,14 @@
 ## Data Automation ToolKit
  
-Automated data import and export by using django custom commands, celery and redis. 
+__Automated data import and export__ by using django custom commands, celery and redis. 
 User can import and export data from CSV file for a existing database model.
 Also applied Error handling and Messages display with user authentication.
 
 Used celery and redis with django for faster data processing. 
+
+
+## Goal
+To be able to perform various operations faster and without interrpution on user interface and commandLine.
 
 
 ## Custome Commands For Command Line Interface

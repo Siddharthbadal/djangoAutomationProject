@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'dataentry',
     'uploads',
     'crispy_forms',
-    'crispy_bootstrap5'
+    'crispy_bootstrap5',
+    'emails',
+    
 ]
 
 MIDDLEWARE = [
