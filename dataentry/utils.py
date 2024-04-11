@@ -66,7 +66,7 @@ def send_email_notification(email_subject, message, to_email, attachment=None):
      """
      try:
         from_email = settings.DEFAULT_FROM_EMAIL
-        mail=EmailMessage(email_subject, message, from_email, to=[to_email])
+        mail=EmailMessage(email_subject, message, from_email, to=to_email)
         if attachment is not None:
              mail.attach_file(attachment)
         mail.send()
