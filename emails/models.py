@@ -1,6 +1,6 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
-# Create your models here.
 
 # email list
 class List(models.Model):
@@ -21,7 +21,7 @@ class Subscriber(models.Model):
 class Email(models.Model):
     email_list = models.ForeignKey(List, on_delete=models.CASCADE)
     subject = models.CharField(max_length=150)
-    body = models.TextField()
+    body = RichTextField()
     attachment = models.FileField(upload_to="email_attachment", blank=True, null=True)
     sent_at = models.DateTimeField(auto_now_add=True)
 

@@ -40,9 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dataentry',
     'uploads',
+    'emails',
+
     'crispy_forms',
     'crispy_bootstrap5',
-    'emails',
+    'ckeditor'
+    
     
 ]
 
@@ -180,3 +183,20 @@ DEFAULT_TO_EMAIL=config('DEFAULT_TO_EMAIL')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+       'toolbar':'Custom',
+       'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'Paragraph Format', 'Image', 'Table'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ],
+        
+        'height': 350,
+        
+    },
+}
+
