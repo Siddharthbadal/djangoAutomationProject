@@ -44,9 +44,9 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'crispy_bootstrap5',
-    'ckeditor'
-    
-    
+    'ckeditor',
+    'anymail'
+        
 ]
 
 MIDDLEWARE = [
@@ -184,19 +184,10 @@ DEFAULT_TO_EMAIL=config('DEFAULT_TO_EMAIL')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
-
 CKEDITOR_CONFIGS = {
     'default': {
-       'toolbar':'Custom',
-       'toolbar_Custom': [
-            ['Bold', 'Italic', 'Underline'],
-            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', 'Paragraph Format', 'Image', 'Table'],
-            ['Link', 'Unlink'],
-            ['RemoveFormat', 'Source']
-        ],
         
         'height': 350,
         
     },
 }
-
