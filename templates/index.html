@@ -5,7 +5,7 @@
 
   <div class="container" style="padding: 50px;">
     {% if user.is_authenticated %}
-    {% comment %} <h2 class="text-center">Data Automation</h2> {% endcomment %}
+    
     <div class="row pt-5">
         <!-- Import data -->
         <div class="col-md-4">
@@ -45,30 +45,18 @@
                     <p class="card-text">Sends bulk emails to users</p>
                     </div>
                 </div>
-               </a>
-                </div>
+            </a>
         </div>
+    </div>
 
     <div class="row pt-5">
-        <!-- Email Tracking -->
-        {% comment %} <div class="col-md-4">
-            <a href="#" class="text-decoration-none text-dark">
-                <div class="card alert-warning shadow">
-                    <div class="card-header border-bottom border-secondary">
-                    <h4>Email Tracking</h4>
-                    </div>
-                    <div class="card-body">
-                    <p class="card-text">Tracks emails and shows open and click rate</p>
-                    </div>
-                </div>
-            </a>
-        </div> {% endcomment %}
+        
 
 
-{% comment %}         
+        
      <!-- Compress Images -->
         <div class="col-md-4">
-            <a href="#" class="text-decoration-none text-dark">
+            <a href="{% url 'compress_image' %}" class="text-decoration-none text-dark">
                 <div class="card alert-danger shadow">
                     <div class="card-header border-bottom border-secondary">
                     <h4>Compress Images</h4>
@@ -81,25 +69,13 @@
         </div>
 
 
-        
-     <!-- Web Scraping -->
-        <div class="col-md-4">
-            <a href="#" class="text-decoration-none text-dark">
-                <div class="card alert-warning shadow">
-                    <div class="card-header border-bottom border-secondary">
-                    <h4>Web Scraping</h4>
-                    </div>
-                    <div class="card-body">
-                    <p class="card-text">Scrapes websites for useful information</p>
-                    </div>
-                </div>
-            </a>
-        </div> {% endcomment %}
+      
     </div>
 
     {% else %}
     <h5 class='text-muted text-center mb-1'>Data Automation ToolKit</h5>
     <div class="row pt-5">
+
         <!-- Import data -->
         <div class="col-md-4">
             <a href="{% url 'login' %}" class="text-decoration-none text-dark">
@@ -135,15 +111,32 @@
                     <h4>Bulk Emails</h4>
                     </div>
                     <div class="card-body">
-                    <p class="card-text">Sends Emails</p>
+                    <p class="card-text">Send Bulk Emails</p>
                     </div>
                 </div>
                </a>
-                </div>
         </div>
+       
+        <div class="row pt-5">
+
+            <!-- Compress Images -->
+            <div class="col-md-4">
+                <a href="{% url 'login' %}" class="text-decoration-none text-dark">
+                    <div class="card alert-danger shadow">
+                        <div class="card-header border-bottom border-secondary">
+                        <h4>Image Compression</h4>
+                        </div>
+                        <div class="card-body">
+                        <p class="card-text">Compress Your Images</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+      
 
    
-
+</div>
 
 
 
