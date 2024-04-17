@@ -28,4 +28,6 @@ Delete Data
     - Bootstrap
 
 
-    ![automate](https://github.com/Siddharthbadal/djangoAutomationToolkit/assets/55015090/426c24c4-2457-402f-ae8b-afeae1f67b20)
+
+
+   ![automate](https://github.com/Siddharthbadal/djangoAutomationToolkit/assets/55015090/426c24c4-2457-402f-ae8b-afeae1f67b20)
