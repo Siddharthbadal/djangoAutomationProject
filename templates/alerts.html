@@ -11,12 +11,13 @@
 <div class="messages" id="messages">
     {% for message in messages %}
     
-    <div {% if message.tags %} class="alert alert-{{ message.tags }} d-flex align-items-center w-50 mt-5 m-auto"{% endif %} role="alert">
+    <div {% if message.tags %} class="alert alert-{{ message.tags }} d-flex align-items-center w-50 mt-5 m-auto d-flex justify-content-between"{% endif %} role="alert">
         
-        {{ message }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        
-      </div>
+        <span>{{ message }}</span>
+                
+      <button type="button" class="btn-close float-right" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
 
     {% endfor %}
 </div>

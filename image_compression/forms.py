@@ -7,4 +7,4 @@ class ImageCompressionForm(forms.ModelForm):
         fields = ['original_image','quality']
 
     original_image = forms.ImageField(label='Uplaod your Image')
-    quality = forms.IntegerField(label='Select your Quality')
+    
