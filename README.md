@@ -28,9 +28,4 @@ Delete Data
     - Bootstrap
 
 
-    
-
-   ![homePage](https://github.com/Siddharthbadal/djangoAutomationProject/assets/55015090/a0b1950b-6ab3-4c61-b079-79a147af6bc4)
-
-    
-   ![dataImportwithCelery](https://github.com/Siddharthbadal/djangoAutomationProject/assets/55015090/7b462e37-6cce-49ca-adff-efad21bba004)
+    ![automate](https://github.com/Siddharthbadal/djangoAutomationToolkit/assets/55015090/426c24c4-2457-402f-ae8b-afeae1f67b20)
